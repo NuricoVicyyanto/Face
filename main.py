@@ -3,8 +3,6 @@ import numpy as np
 import face_recognition
 import os
 
-hand_cascade = cv2.CascadeClassifier('hand_cascade.xml')
-
 count = 0
 title = 'Face Detection'
 path = 'image'
@@ -62,7 +60,7 @@ while True:
         break
     elif keyCode%256 == 32:
         # SPACE pressed
-        file = 'C:/Users/vicky/Documents/Opencv/templatematch/image/user'+str(count)+'.jpg'
+        file = 'C:/Users/user/Documents/image/user'+str(count)+'.jpg' #save capture location
         cv2.imwrite(file, img)
         count +=1
         break
